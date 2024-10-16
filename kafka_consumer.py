@@ -14,7 +14,6 @@ def main():
 
     try:
         while True:
-            # Poll for new messages with a timeout of 1 second
             message = consumer.poll(1.0)
 
             if message is None:
@@ -23,7 +22,6 @@ def main():
                 print(f"Consumer error: {message.error()}")
                 continue
 
-            # Process the received message
             data = message.value().decode("utf-8")
             print(f"Received message: {data}")
 
