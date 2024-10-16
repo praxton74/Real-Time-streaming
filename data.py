@@ -2,8 +2,7 @@ from faker import Faker
 import random
 import time
 
-faker = Faker()
-
+faker=Faker()
 
 def generate_social_media_post():
     post_id=faker.uuid4()
