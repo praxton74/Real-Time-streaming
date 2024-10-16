@@ -22,12 +22,9 @@ def main():
 
     with open("sample_data.txt") as f:
         for line in f:
-            # Produce each line as a Kafka message
             producer.produce(
                 topic, value=line.strip().encode("utf-8"), callback=delivery_report
             )
-
-            # Wait for a little to simulate a real data stream
             time.sleep(1)
 
     producer.flush()
