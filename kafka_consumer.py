@@ -20,7 +20,8 @@ def main():
                 continue
             data=message.value().decode("utf-8")
             print(f"Received message: {data}")
-            
+
+    
     except KeyboardInterrupt:
         pass
     finally:
